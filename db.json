@@ -1,0 +1,78 @@
+{
+  "workTimes": [
+    {
+      "id": 1,
+      "date": "2020-03-15",
+      "workHours": 8.5,
+      "projectManagers": [
+        1
+      ],
+      "analyticReference": "123",
+      "activityId": "CONSTRUCTION",
+      "workName": "Rénovation techbuilding"
+    },
+    {
+      "projectManagers": [
+        1
+      ],
+      "date": "2020-03-13",
+      "workHours": 8,
+      "analyticReference": "0111-11-01",
+      "workName": "fdf",
+      "id": 2,
+      "activityId": "OTHER"
+    }
+  ],
+  "activities": [
+    {
+      "id": "CONSTRUCTION",
+      "title": "Chantier",
+      "name": "Chantier"
+    },
+    {
+      "id": "OTHER",
+      "title": "Autre",
+      "name": "Autre"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Alexandre Avian",
+      "username": "aavian",
+      "password": "1234567890",
+      "groups": [
+        "EMPLOYEES",
+        "PROJECT_MANAGERS"
+      ],
+      "email": "a.avian@tech-building.com",
+      "address": {
+        "street": "Route de Saint-Julien 259",
+        "city": "Perly",
+        "zipcode": "CH-1258"
+      },
+      "mobile": "+41 (0)79 397 66 94",
+      "phone": "+41 (0)22 309 43 50",
+      "fax": "+41 (0)22 309 43 59"
+    },
+    {
+      "id": 2,
+      "name": "Sovattha Sok",
+      "username": "ssok",
+      "password": "1234567890",
+      "groups": [
+        "EMPLOYEES",
+        "WORKER"
+      ],
+      "email": "sovatthasok@gmail.com",
+      "address": {
+        "street": "Chemin des Leppes 19",
+        "city": "Chailly-Montreux",
+        "zipcode": "CH-1816"
+      },
+      "mobile": "+41 (0)76 501 76 56",
+      "phone": "",
+      "fax": ""
+    }
+  ]
+}
