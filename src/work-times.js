@@ -16,6 +16,7 @@ const UserFilter = ({ permissions, ...props }) =>
 
 export const WorktimeList = ({ permissions, ...props }) => (
     <List {...props}
+    filter={permissions !== 'admin' && { userId: localStorage.getItem('username') }}
     filters={<UserFilter permissions={permissions} {...props} />}
     sort={{ field: 'name', order: 'ASC' }}>
         <Datagrid rowClick="edit">

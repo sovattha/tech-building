@@ -3,6 +3,11 @@ export default {
     login: ({ username, password }) => {
         localStorage.setItem('username', username);
         localStorage.setItem('token', '1234567890');
+        if (username === 'aavian') {
+            localStorage.setItem('permissions', 'admin');
+        } else {
+            localStorage.setItem('permissions', 'user');
+        }
         // accept all username/password combinations
         return Promise.resolve();
     },
@@ -28,5 +33,8 @@ export default {
             : Promise.reject();
     },
     // called when the user navigates to a new location, to check for permissions / roles
-    getPermissions: () => Promise.resolve('admin'),
+    getPermissions: () => {
+        const role = localStorage.getItem('permissions');
+        return role ? Promise.resolve(role) : Promise.reject();
+    }
 };

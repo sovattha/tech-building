@@ -1,7 +1,4 @@
 module.exports = {
-    ra: {
-        dashboard: 'Dashboard'
-    },
     dashboard: {
         welcome: 'Welcome',
     },

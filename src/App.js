@@ -1,19 +1,23 @@
-import WorktimeIcon from '@material-ui/icons/AccessAlarm';
+import WorktimeIcon from '@material-ui/icons/Timer';
+import ExtraTimeIcon from '@material-ui/icons/AlarmAdd';
+import ExpensesIcon from '@material-ui/icons/Euro';
+import VacationIcon from '@material-ui/icons/BeachAccess';
+import SettingsIcon from '@material-ui/icons/Settings';
 import UserIcon from '@material-ui/icons/Group';
 import jsonServerProvider from 'ra-data-json-server';
 import polyglotI18nProvider from 'ra-i18n-polyglot';
 import englishMessages from 'ra-language-english';
 import frenchMessages from 'ra-language-french';
 import React from 'react';
-import { Admin, fetchUtils, Resource, EditGuesser } from 'react-admin';
+import { Admin, EditGuesser, fetchUtils, ListGuesser, Resource } from 'react-admin';
 import { ActivityList } from './activities';
 import authProvider from './authProvider';
 import Dashboard from './Dashboard';
 import englishMessagesCustom from './en';
 import frenchMessagesCustom from './fr';
 import theme from './theme';
+import { UserGroupCreate, UserGroupEdit, UserGroupList } from './user-groups';
 import { UserCreate, UserEdit, UserList } from './users';
-import { UserGroupList, UserGroupEdit, UserGroupCreate } from './user-groups';
 import { WorktimeCreate, WorktimeEdit, WorktimeList } from './work-times';
 
 const messages = {
@@ -51,6 +55,9 @@ const App = () => (
                 create={WorktimeCreate}
                 icon={WorktimeIcon}
             />,
+            <Resource name="extraTime" list={ListGuesser} icon={ExtraTimeIcon} />,
+            <Resource name="expenses" list={ListGuesser} icon={ExpensesIcon} />,
+            <Resource name="vacationRequests" list={ListGuesser} icon={VacationIcon} />,
             <Resource
                 name="users"
                 icon={UserIcon}
@@ -63,12 +70,14 @@ const App = () => (
                 list={permissions === 'admin' ? ActivityList : null}
                 edit={permissions === 'admin' ? EditGuesser : null}
                 create={permissions === 'admin' ? EditGuesser : null}
+                icon={SettingsIcon}
             />,
             <Resource
                 name="userGroups"
                 list={permissions === 'admin' ? UserGroupList : null}
                 edit={permissions === 'admin' ? UserGroupEdit : null}
                 create={permissions === 'admin' ? UserGroupCreate : null}
+                icon={SettingsIcon}
             />,
         ]}
     </Admin>

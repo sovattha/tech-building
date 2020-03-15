@@ -8,7 +8,7 @@ import LocaleSwitcher from './locale-switcher';
 export default ({ permissions }) => {
     const translate = useTranslate();
     return <Card>
-        <Title title="ra.dashboard" />
+        <Title title={translate('ra.page.dashboard')} />
         <CardHeader title={`${translate('dashboard.welcome')} ${localStorage.getItem('username')}`}></CardHeader>
         <CardContent>
             <LocaleSwitcher />

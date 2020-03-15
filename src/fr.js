@@ -1,7 +1,4 @@
 module.exports = {
-    ra: {
-        dashboard: 'Tableau de bord'
-    },
     dashboard: {
         welcome: 'Bienvenue',
     },
@@ -14,6 +11,15 @@ module.exports = {
         }
     },
     resources: {
+        extraTime: {
+            name: 'Heures supplémentaires',
+        },
+        expenses: {
+            name: 'Note de frais',
+        },
+        vacationRequests: {
+            name: 'Demande de congés',
+        },
         users: {
             name: 'Utilisateur |||| Utilisateurs',
             fields: {
