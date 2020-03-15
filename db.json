@@ -1,24 +1,26 @@
 {
   "workTimes": [
     {
+      "userId": "aavian",
+      "workName": "Rénovation techbuilding",
       "id": 1,
       "date": "2020-03-15",
       "workHours": 8.5,
       "projectManagers": [
-        1
+        "aavian"
       ],
       "analyticReference": "123",
-      "activityId": "CONSTRUCTION",
-      "workName": "Rénovation techbuilding"
+      "activityId": "CONSTRUCTION"
     },
     {
+      "userId": "ssok",
+      "workName": "Administratif",
       "projectManagers": [
-        1
+        "aavian"
       ],
       "date": "2020-03-13",
       "workHours": 8,
-      "analyticReference": "0111-11-01",
-      "workName": "fdf",
+      "analyticReference": "123456",
       "id": 2,
       "activityId": "OTHER"
     }
@@ -26,20 +28,31 @@
   "activities": [
     {
       "id": "CONSTRUCTION",
-      "title": "Chantier",
       "name": "Chantier"
     },
     {
       "id": "OTHER",
-      "title": "Autre",
       "name": "Autre"
+    }
+  ],
+  "userGroups": [
+    {
+      "id": "EMPLOYEES",
+      "name": "Employés"
+    },
+    {
+      "id": "PROJECT_MANAGERS",
+      "name": "Chefs de projets"
+    },
+    {
+      "id": "EXTERNAL",
+      "name": "Externes"
     }
   ],
   "users": [
     {
-      "id": 1,
       "name": "Alexandre Avian",
-      "username": "aavian",
+      "id": "aavian",
       "password": "1234567890",
       "groups": [
         "EMPLOYEES",
@@ -53,12 +66,15 @@
       },
       "mobile": "+41 (0)79 397 66 94",
       "phone": "+41 (0)22 309 43 50",
-      "fax": "+41 (0)22 309 43 59"
+      "fax": "+41 (0)22 309 43 59",
+      "userGroups": [
+        "PROJECT_MANAGERS",
+        "EMPLOYEES"
+      ]
     },
     {
-      "id": 2,
       "name": "Sovattha Sok",
-      "username": "ssok",
+      "id": "ssok",
       "password": "1234567890",
       "groups": [
         "EMPLOYEES",
@@ -72,7 +88,10 @@
       },
       "mobile": "+41 (0)76 501 76 56",
       "phone": "",
-      "fax": ""
+      "fax": "",
+      "userGroups": [
+        "EXTERNAL"
+      ]
     }
   ]
 }

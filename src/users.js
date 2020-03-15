@@ -1,16 +1,18 @@
 import React from 'react';
-import { Create, Edit, SimpleForm, TextInput, List, Datagrid, TextField, EmailField } from 'react-admin';
-import MyUrlField from './MyUrlField';
+import { ChipField, Create, Datagrid, Edit, EmailField, List, PasswordInput, ReferenceArrayField, ReferenceArrayInput, required, SelectArrayInput, SimpleForm, SingleFieldList, TextField, TextInput } from 'react-admin';
 
 export const UserList = props => (
     <List {...props}>
         <Datagrid rowClick="edit">
             <TextField source="id" />
             <TextField source="name" />
+            <ReferenceArrayField label="Groupes" reference="userGroups" source="userGroups">
+                <SingleFieldList>
+                    <ChipField source="name" />
+                </SingleFieldList>
+            </ReferenceArrayField>
             <EmailField source="email" />
             <TextField source="phone" />
-            <MyUrlField source="website" />
-            <TextField source="company.name" />
         </Datagrid>
     </List>
 );
@@ -18,12 +20,13 @@ export const UserList = props => (
 export const UserEdit = props => (
     <Edit {...props}>
         <SimpleForm>
-            <TextInput source="id" />
-            <TextInput source="name" />
-            <TextInput source="username" />
-            <TextInput source="password" />
-            <TextInput source="groups" />
-            <TextInput source="email" />
+            <TextInput source="id" validate={[required()]} disabled />
+            <TextInput source="name" validate={[required()]} />
+            <PasswordInput source="password" validate={[required()]} />
+            <ReferenceArrayInput reference="userGroups" source="userGroups" validate={[required()]}>
+                <SelectArrayInput optionText="name" />
+            </ReferenceArrayInput>
+            <TextInput source="email" validate={[required()]} />
             <TextInput source="address.street" />
             <TextInput source="mobile" />
             <TextInput source="phone" />
@@ -35,12 +38,12 @@ export const UserEdit = props => (
 export const UserCreate = props => (
     <Create {...props}>
         <SimpleForm>
-            <TextInput source="id" allowEmpty />
-            <TextInput source="name" />
-            <TextInput source="username" />
-            <TextInput source="password" />
-            <TextInput source="groups" />
-            <TextInput source="email" />
+            <TextInput source="name" validate={[required()]} />
+            <PasswordInput source="password" validate={[required()]} />
+            <ReferenceArrayInput reference="userGroups" source="userGroups" validate={[required()]}>
+                <SelectArrayInput optionText="name" />
+            </ReferenceArrayInput>
+            <TextInput source="email" validate={[required()]} />
             <TextInput source="address.street" />
             <TextInput source="mobile" />
             <TextInput source="phone" />

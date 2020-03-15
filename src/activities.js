@@ -5,7 +5,7 @@ export const ActivityList = props => (
     <List {...props}>
         <Datagrid rowClick="edit">
             <TextField source="id" />
-            <TextField source="title" />
+            <TextField source="name" />
         </Datagrid>
     </List>
 );

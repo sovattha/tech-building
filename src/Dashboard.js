@@ -1,16 +1,21 @@
-import React from 'react';
+import { CardHeader } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import CardHeader from '@material-ui/core/CardHeader';
-import Button from '@material-ui/core/Button';
+import React from 'react';
+import { Title, useTranslate } from 'react-admin';
+import LocaleSwitcher from './locale-switcher';
 
-export default () => (
-    <Card>
-        <CardHeader title="Welcome to the administration" />
-        <CardContent>Lorem ipsum sic dolor amet...</CardContent>
-
-        <Button variant="contained" color="primary">
-        Hello World
-        </Button>   
-    </Card>
-);
+export default ({ permissions }) => {
+    const translate = useTranslate();
+    return <Card>
+        <Title title="ra.dashboard" />
+        <CardHeader title={`${translate('dashboard.welcome')} ${localStorage.getItem('username')}`}></CardHeader>
+        <CardContent>
+            <LocaleSwitcher />
+        </CardContent>
+        {permissions === 'admin'
+            ? <CardContent></CardContent>
+            : null
+        }
+    </Card>;
+};
