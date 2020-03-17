@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/tech-building/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/tech-building/static/js/main.a7f8772f.chunk.js",
+    "main.js.map": "/tech-building/static/js/main.a7f8772f.chunk.js.map",
+    "runtime-main.js": "/tech-building/static/js/runtime-main.14727502.js",
+    "runtime-main.js.map": "/tech-building/static/js/runtime-main.14727502.js.map",
+    "static/js/2.46c82f7a.chunk.js": "/tech-building/static/js/2.46c82f7a.chunk.js",
+    "static/js/2.46c82f7a.chunk.js.map": "/tech-building/static/js/2.46c82f7a.chunk.js.map",
+    "index.html": "/tech-building/index.html",
+    "precache-manifest.3e986228910dbb68dbd2c6ee363e4817.js": "/tech-building/precache-manifest.3e986228910dbb68dbd2c6ee363e4817.js",
+    "service-worker.js": "/tech-building/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/tech-building/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.46c82f7a.chunk.js.LICENSE.txt": "/tech-building/static/js/2.46c82f7a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.14727502.js",
+    "static/js/2.46c82f7a.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.a7f8772f.chunk.js"
+  ]
+}
