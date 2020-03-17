@@ -1,14 +1,14 @@
 
 import { createMuiTheme } from '@material-ui/core/styles';
 
-import indigo from '@material-ui/core/colors/indigo';
-import pink from '@material-ui/core/colors/pink';
+import blue from '@material-ui/core/colors/blue';
+import grey from '@material-ui/core/colors/grey';
 import red from '@material-ui/core/colors/red';
 
 const theme = createMuiTheme({
     palette: {
-        primary: indigo,
-        secondary: pink,
+        primary: blue,
+        secondary: grey,
         error: red,
         contrastThreshold: 3,
         tonalOffset: 0.2,
@@ -16,10 +16,9 @@ const theme = createMuiTheme({
     typography: {
         // Use the system font instead of the default Roboto font.
         fontFamily: [
-            '-apple-system',
-            'BlinkMacSystemFont',
-            '"Segoe UI"',
+            'Muli',
             'Arial',
+            'Tahoma',
             'sans-serif',
         ].join(','),
     },

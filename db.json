@@ -23,6 +23,18 @@
       "analyticReference": "123456",
       "id": 2,
       "activityId": "OTHER"
+    },
+    {
+      "userId": "bolga",
+      "workName": "test",
+      "analyticReference": "232323454",
+      "date": "2020-03-15",
+      "activityId": "CONSTRUCTION",
+      "workHours": 8,
+      "projectManagers": [
+        "ssok"
+      ],
+      "id": 3
     }
   ],
   "activities": [
@@ -92,6 +104,19 @@
       "userGroups": [
         "EXTERNAL"
       ]
+    },
+    {
+      "name": "Olga",
+      "password": "z8799898",
+      "userGroups": [
+        "EMPLOYEES"
+      ],
+      "email": "o.s.borodina@gmail.com",
+      "address": {
+        "street": "Chemin des Leppes 19"
+      },
+      "mobile": "0765017656",
+      "id": "bolga"
     }
   ]
 }
