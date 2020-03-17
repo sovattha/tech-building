@@ -52,7 +52,7 @@ const App = () => (
         locale="fr"
         theme={theme}
         dataProvider={jsonServerProvider(
-            'http://localhost:3001',
+            'https://my-json-server.typicode.com/sovattha/tech-building',
             httpClient
         )}
         authProvider={authProvider}

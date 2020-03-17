@@ -2,8 +2,10 @@
   "name": "test-admin",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://soks.github.io/tech-building",
   "dependencies": {
     "@material-ui/core": "^4.9.0",
+    "gh-pages": "^2.2.0",
     "ra-data-json-server": "^3.0.0",
     "ra-language-english": "^3.2.0",
     "ra-language-french": "^3.2.0",
@@ -17,7 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "db": "json-server --watch db.json --port 3001"
+    "db": "json-server --watch db.json --port 3001",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
